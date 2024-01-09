@@ -49,7 +49,7 @@ class AuthRepo {
     }
   }
 
-  saveUserInfoToFirebase(
+  Future<void> saveUserInfoToFirebase(
       String? uid, String? displayName, String? email, String? photoUrl) async {
     try {
       await FirebaseFirestore.instance.collection("users").doc(uid).set({
@@ -71,4 +71,7 @@ class AuthRepo {
       throw e.toString();
     }
   }
+
+  signInWithEmailAndPassword(
+      {required String email, required String password}) {}
 }

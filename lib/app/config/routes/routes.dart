@@ -15,7 +15,7 @@ abstract class AppRouter {
 
   /// use this in [MaterialApp.router]
   static final _router = GoRouter(
-    initialLocation: MyNamedRoutes.root,
+    initialLocation: MyNamedRoutes.register,
     navigatorKey: rootNavigatorKey,
     debugLogDiagnostics: true,
     routes: [

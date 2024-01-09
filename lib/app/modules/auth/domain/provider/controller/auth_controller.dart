@@ -2,11 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tutoring_app/app/modules/auth/domain/provider/state/auth_state.dart';
 import 'package:tutoring_app/app/modules/auth/domain/repo/auth_repo.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AuthController extends StateNotifier<AuthState> {
   AuthController(super.state, this._authRepo);
   final AuthRepo _authRepo;
-
+  final FirebaseFirestore _fireStore = FirebaseFirestore.instance;
   Future<bool> register(
       {required String email,
       required String username,
@@ -45,6 +47,23 @@ class AuthController extends StateNotifier<AuthState> {
       await _authRepo.signOut();
     } catch (e) {
       throw e.toString();
+    }
+  }
+
+  Future<UserCredential> userLogin(String email, String password) async {
+    try {
+      UserCredential userCredential = await _authRepo
+          .signInWithEmailAndPassword(email: email, password: password);
+
+      // save user info if it doesn't already exist
+      _fireStore
+          .collection("Users")
+          .doc(userCredential.user!.uid)
+          .set({'uid': userCredential.user!.uid, 'email': email});
+
+      return userCredential;
+    } on FirebaseAuthException catch (error) {
+      throw Exception(error.code);
     }
   }
 }

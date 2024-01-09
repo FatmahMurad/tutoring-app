@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tutoring_app/app/config/theme/my_colors.dart';
 import 'package:tutoring_app/app/core/extensions/build_context_extensions.dart';
 import 'package:tutoring_app/app/modules/auth/domain/provider/state/auth_providers.dart';
@@ -60,6 +61,14 @@ class RegisterScreen extends ConsumerWidget {
                       fontWeight: FontWeight.bold, color: MyColors.primary_500),
                 ),
               ),
+              SizedBox(
+                height: context.screenHeight * 0.04,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    context.push('/login');
+                  },
+                  child: Text('Sign In'))
             ],
           ),
         ),
