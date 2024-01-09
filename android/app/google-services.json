@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "934762686256",
+    "project_id": "tutoring-app-flutter",
+    "storage_bucket": "tutoring-app-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934762686256:android:051cfd730ea586204b4af5",
+        "android_client_info": {
+          "package_name": "com.example.tutoring_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934762686256-u7vfcgfc097l50h28hv3hllhdtf4g87b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tutoring_app",
+            "certificate_hash": "c462eaa9223e32e0ab8403726a4e63ed674c4fcc"
+          }
+        },
+        {
+          "client_id": "934762686256-5abd8kma9o9b1qg7jbgms4irrcqidefe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlxNUaJjhOjs5tDP7AUej1bNJnBBvT9Ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934762686256-5abd8kma9o9b1qg7jbgms4irrcqidefe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "934762686256-i3b1ni7eedudsmlm8aeac0s25n8aqri0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tutoringApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
