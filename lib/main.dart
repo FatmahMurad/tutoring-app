@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tutoring_app/app/config/routes/routes.dart';
 import 'package:tutoring_app/app/config/theme/my_theme.dart';
 import 'package:tutoring_app/firebase_options.dart';
+ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      title: "Chater",
+      title: "Tutor",
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
