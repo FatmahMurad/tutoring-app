@@ -4,5 +4,8 @@
     "email":"Email",
     "userName":"Username",
     "password":"Password",
-    "googleSignIn":"Google Sign In"
+    "googleSignIn":"Google Sign In",
+    "errorFetchingUsers":"errorFetchingUsers",
+    "location":"location",
+    "profile":"profile"
 }

@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
             onTap: () {
               context.pushNamed(MyNamedRoutes.register);
             },
-            child: Text("Splash Screen"),
+            child: Text("Tutor App"),
           ),
         ),
       ),
